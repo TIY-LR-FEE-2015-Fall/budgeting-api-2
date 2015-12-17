@@ -8,7 +8,7 @@ var loader = require('flat-load');
 var resources = require('auto-loader').load(__dirname + '/resources');
 
 // Namespaces all API Resources to /api
-router.use('/api', apiRouter);
+router.use(apiRouter);
 
 // Protects Protected Routes using OAuth2 Filter
 protectedRouter.use(oauth.authorise());

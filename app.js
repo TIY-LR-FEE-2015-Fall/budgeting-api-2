@@ -4,6 +4,8 @@ var favicon = require('serve-favicon');
 
 var app = express();
 
+app.use(require('cors')());
+
 require('./bootstrap/middleware')(app);
 
 // Mail isn't needed. If you want it THERE BE DRAGONS
